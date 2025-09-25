@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebServerPortNumber" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">99</Value>
+    </Setting>
+    <Setting Name="AutoRunWebServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DefWebHandler" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Housing Bank IBM Websphare MQ</Value>
+    </Setting>
+    <Setting Name="EnableLogging" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HideMe" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QueueManager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">QRAAMQ1</Value>
+    </Setting>
+    <Setting Name="channelName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SYSTEM.DEF.SVRCONN</Value>
+    </Setting>
+    <Setting Name="connectionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">172.31.6.78(1414)</Value>
+    </Setting>
+    <Setting Name="ChannelID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">BRK</Value>
+    </Setting>
+    <Setting Name="UsePreOpenQ" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NumberOfPreOpenQ" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="PoolAccountNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2011121211222</Value>
+    </Setting>
+    <Setting Name="HostName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">172.31.6.78</Value>
+    </Setting>
+    <Setting Name="PORT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1414</Value>
+    </Setting>
+    <Setting Name="ZagTraderConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SRVJVIRBRGT02;Initial Catalog=HB2018;Persist Security Info=True;User ID=zagtrader10;Password=zagtrader12&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SRVJVIRBRGT02;Initial Catalog=HB2018;Persist Security Info=True;User ID=zagtrader10;Password=zagtrader12</Value>
+    </Setting>
+    <Setting Name="SyncTransFromThisServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NumberOfRetries" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,36 @@
+06/11/2017 12:14 ? - Process(7680.11) User(Esam) Program(ebug\ZagAPIServer.EXE)
+AMQ9202: Remote host '172.31.6.78(1414)' not available, retry later.
+
+EXPLANATION:
+The attempt to allocate a conversation using TCP/IP to host '172.31.6.78(1414)'
+for channel  (Exception) was not successful. However the error may be a
+transitory one and it may be possible to successfully allocate a TCP/IP
+conversation later. 
+
+ In some cases the remote host cannot be determined and so is shown as '????'.
+ACTION:
+Try the connection again later. If the failure persists, record the error
+values and contact your systems administrator. The return code from TCP/IP is 0
+(X'0'). The reason for the failure may be that this host cannot reach the
+destination host. It may also be possible that the listening program at host
+'172.31.6.78(1414)' was not running.  If this is the case, perform the relevant
+operations to start the TCP/IP listening program, and try again.
+----- IBM.WMQ.MQTCPConnection.ConnectSocket : 0 -------------------------------
+06/11/2017 12:17 ? - Process(7680.15) User(Esam) Program(ebug\ZagAPIServer.EXE)
+AMQ9202: Remote host '172.31.6.78(1414)' not available, retry later.
+
+EXPLANATION:
+The attempt to allocate a conversation using TCP/IP to host '172.31.6.78(1414)'
+for channel  (Exception) was not successful. However the error may be a
+transitory one and it may be possible to successfully allocate a TCP/IP
+conversation later. 
+
+ In some cases the remote host cannot be determined and so is shown as '????'.
+ACTION:
+Try the connection again later. If the failure persists, record the error
+values and contact your systems administrator. The return code from TCP/IP is 0
+(X'0'). The reason for the failure may be that this host cannot reach the
+destination host. It may also be possible that the listening program at host
+'172.31.6.78(1414)' was not running.  If this is the case, perform the relevant
+operations to start the TCP/IP listening program, and try again.
+----- IBM.WMQ.MQTCPConnection.ConnectSocket : 0 -------------------------------

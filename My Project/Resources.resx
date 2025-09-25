@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccINQ" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml SBAcctInq.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_Zag_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;AcctInq&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;BRK&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;AcctInqRequest&gt;
+&lt;AcctInqRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACC&lt;/AcctId&gt;
+&lt;/AcctId&gt;
+&lt;/AcctInqRq&gt;
+&lt;/AcctInqRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="AccINQRep" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.finacle.com/fixml AcctInq.xsd"&gt;
+    &lt;Header&gt;
+        &lt;ResponseHeader&gt;
+            &lt;RequestMessageKey&gt;
+                &lt;RequestUUID&gt;Req_15136323420714131&lt;/RequestUUID&gt;
+                &lt;ServiceRequestId&gt;AcctInq&lt;/ServiceRequestId&gt;
+                &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+                &lt;ChannelId&gt;BRK&lt;/ChannelId&gt;
+            &lt;/RequestMessageKey&gt;
+            &lt;ResponseMessageInfo&gt;
+                &lt;BankId&gt;01&lt;/BankId&gt;
+                &lt;TimeZone/&gt;
+                &lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+            &lt;/ResponseMessageInfo&gt;
+            &lt;UBUSTransaction&gt;
+                &lt;Id/&gt;
+                &lt;Status/&gt;
+            &lt;/UBUSTransaction&gt;
+            &lt;HostTransaction&gt;
+                &lt;Id/&gt;
+                &lt;Status&gt;SUCCESS&lt;/Status&gt;
+            &lt;/HostTransaction&gt;
+            &lt;HostParentTransaction&gt;
+                &lt;Id/&gt;
+                &lt;Status/&gt;
+            &lt;/HostParentTransaction&gt;
+            &lt;CustomInfo/&gt;
+        &lt;/ResponseHeader&gt;
+    &lt;/Header&gt;
+    &lt;Body&gt;
+        &lt;AcctInqResponse&gt;
+            &lt;AcctInqRs&gt;
+                &lt;AcctId&gt;
+                    &lt;AcctId&gt;0022020100110001&lt;/AcctId&gt;
+                    &lt;AcctType&gt;
+                        &lt;SchmCode&gt;SBGEN&lt;/SchmCode&gt;
+                        &lt;SchmType&gt;SBA&lt;/SchmType&gt;
+                    &lt;/AcctType&gt;
+                    &lt;AcctCurr&gt;JOD&lt;/AcctCurr&gt;
+                    &lt;BankInfo&gt;
+                        &lt;BankId/&gt;
+                        &lt;Name/&gt;
+                        &lt;BranchId&gt;001&lt;/BranchId&gt;
+                        &lt;BranchName&gt;MAIN BRANCH&lt;/BranchName&gt;
+                        &lt;PostAddr&gt;
+                            &lt;Addr1/&gt;
+                            &lt;Addr2/&gt;
+                            &lt;Addr3/&gt;
+                            &lt;City/&gt;
+                            &lt;StateProv/&gt;
+                            &lt;PostalCode/&gt;
+                            &lt;Country/&gt;
+                            &lt;AddrType/&gt;
+                        &lt;/PostAddr&gt;
+                    &lt;/BankInfo&gt;
+                &lt;/AcctId&gt;
+                &lt;CustId&gt;
+                    &lt;CustId&gt;00220201&lt;/CustId&gt;
+                    &lt;PersonName&gt;
+                        &lt;LastName/&gt;
+                        &lt;FirstName/&gt;
+                        &lt;MiddleName/&gt;
+                        &lt;Name&gt;00220201&lt;/Name&gt;
+                        &lt;TitlePrefix&gt;1&lt;/TitlePrefix&gt;
+                    &lt;/PersonName&gt;
+                &lt;/CustId&gt;
+                &lt;AcctOpenDt&gt;1980-10-06T00:00:00.000&lt;/AcctOpenDt&gt;
+                &lt;ModeOfOperCode/&gt;
+                &lt;ModeOfOperCodeDesc/&gt;
+                &lt;BankAcctStatusCode&gt;D&lt;/BankAcctStatusCode&gt;
+                &lt;AcctGenInfo&gt;
+                    &lt;GenLedgerSubHead&gt;
+                        &lt;GenLedgerSubHeadCode&gt;31000&lt;/GenLedgerSubHeadCode&gt;
+                        &lt;CurCode&gt;JOD&lt;/CurCode&gt;
+                    &lt;/GenLedgerSubHead&gt;
+                    &lt;AcctName&gt;0022020100110001&lt;/AcctName&gt;
+                    &lt;AcctShortName&gt;0022020100&lt;/AcctShortName&gt;
+                    &lt;AcctStmtMode&gt;S&lt;/AcctStmtMode&gt;
+                    &lt;AcctStmtFreq&gt;
+                        &lt;Cal&gt;N&lt;/Cal&gt;
+                        &lt;Type&gt;Y&lt;/Type&gt;
+                        &lt;StartDt&gt;1&lt;/StartDt&gt;
+                        &lt;WeekDay&gt;0&lt;/WeekDay&gt;
+                        &lt;WeekNum/&gt;
+                        &lt;HolStat&gt;N&lt;/HolStat&gt;
+                    &lt;/AcctStmtFreq&gt;
+                    &lt;AcctStmtNxtPrintDt&gt;2014-12-31T00:00:00.000&lt;/AcctStmtNxtPrintDt&gt;
+                    &lt;DespatchMode&gt;P&lt;/DespatchMode&gt;
+                &lt;/AcctGenInfo&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;LEDGER&lt;/BalType&gt;
+                   &lt;BalAmt&gt;
+                        &lt;amountValue&gt;8442.807&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;AVAIL&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;8442.807&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;EFFAVL&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;8442.807&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;FLOAT&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;LIEN&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;DRWPWR&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;SHADOW&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;BLOCKEDLIEN&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;ACCBAL&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;8442.807&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;AcctBal&gt;
+                    &lt;BalType&gt;FUTBAL&lt;/BalType&gt;
+                    &lt;BalAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode&gt;JOD&lt;/currencyCode&gt;
+                    &lt;/BalAmt&gt;
+                    &lt;CrDrInd&gt;C&lt;/CrDrInd&gt;
+                &lt;/AcctBal&gt;
+                &lt;NetIntDrCrInd&gt;C&lt;/NetIntDrCrInd&gt;
+                &lt;NetIntRate&gt;
+                    &lt;value&gt;0.3&lt;/value&gt;
+                &lt;/NetIntRate&gt;
+                &lt;DepAcctInfo&gt;
+                    &lt;TotalIntAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/TotalIntAmt&gt;
+                    &lt;CurrDepAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/CurrDepAmt&gt;
+                    &lt;MaturityAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/MaturityAmt&gt;
+                    &lt;DepositTerm&gt;
+                        &lt;Days&gt;0&lt;/Days&gt;
+                        &lt;Months&gt;0&lt;/Months&gt;
+                    &lt;/DepositTerm&gt;
+                &lt;/DepAcctInfo&gt;
+                &lt;LoanAcctInfo&gt;
+                    &lt;AmtAlreadyDisb&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/AmtAlreadyDisb&gt;
+                    &lt;AmtAvailForDisb&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/AmtAvailForDisb&gt;
+                    &lt;LoanGenInfo&gt;
+                        &lt;RepayMethod/&gt;
+                        &lt;LoanPeriodDays&gt;0&lt;/LoanPeriodDays&gt;
+                        &lt;LoanPeriodMonths&gt;0&lt;/LoanPeriodMonths&gt;
+                        &lt;OperAcctId&gt;
+                            &lt;AcctId/&gt;
+                            &lt;AcctType&gt;
+                                &lt;SchmCode/&gt;
+                                &lt;SchmType/&gt;
+                            &lt;/AcctType&gt;
+                            &lt;AcctCurr/&gt;
+                            &lt;BankInfo&gt;
+                                &lt;BankId/&gt;
+                                &lt;Name/&gt;
+                                &lt;BranchId/&gt;
+                                &lt;BranchName/&gt;
+                                &lt;PostAddr&gt;
+                                    &lt;Addr1/&gt;
+                                    &lt;Addr2/&gt;
+                                    &lt;Addr3/&gt;
+                                    &lt;City/&gt;
+                                    &lt;StateProv/&gt;
+                                    &lt;PostalCode/&gt;
+                                    &lt;Country/&gt;
+                                    &lt;AddrType/&gt;
+                                &lt;/PostAddr&gt;
+                            &lt;/BankInfo&gt;
+                        &lt;/OperAcctId&gt;
+                        &lt;ReschedParams&gt;
+                            &lt;ReschedAdjTenorAmtFlg/&gt;
+                            &lt;AutoReschedForEveryDisbFlg/&gt;
+                            &lt;AutoReschedForIntRateChange/&gt;
+                            &lt;ReschedAmtFlg/&gt;
+                            &lt;AutoReschedPrepaymentFlg/&gt;
+                        &lt;/ReschedParams&gt;
+                        &lt;PmtPlan&gt;
+                            &lt;HolidayPeriodDetails&gt;
+                                &lt;HolidayPeriod&gt;0&lt;/HolidayPeriod&gt;
+                                &lt;AutoReschedPostHolidayPeriod/&gt;
+                                &lt;IntDuringHolidayPeriod/&gt;
+                                &lt;IntFreq&gt;
+                                    &lt;Cal/&gt;
+                                    &lt;Type/&gt;
+                                    &lt;StartDt&gt;0&lt;/StartDt&gt;
+                                    &lt;WeekDay&gt;0&lt;/WeekDay&gt;
+                                    &lt;WeekNum/&gt;
+                                    &lt;HolStat/&gt;
+                                &lt;/IntFreq&gt;
+                            &lt;/HolidayPeriodDetails&gt;
+                            &lt;IntRestBasis/&gt;
+                            &lt;IntRestFreq/&gt;
+                            &lt;EqInstallDetails&gt;
+                                &lt;EqInstallFlg/&gt;
+                                &lt;EqInstallType/&gt;
+                                &lt;EqInstallFormula/&gt;
+                            &lt;/EqInstallDetails&gt;
+                        &lt;/PmtPlan&gt;
+                        &lt;LoanAmt&gt;
+                            &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                           &lt;currencyCode/&gt;
+                        &lt;/LoanAmt&gt;
+                    &lt;/LoanGenInfo&gt;
+                    &lt;EquatedInstlmntFlg/&gt;
+                &lt;/LoanAcctInfo&gt;
+                &lt;TUDepAcctInfo&gt;
+                    &lt;TotalIntAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/TotalIntAmt&gt;
+                    &lt;InitialDepAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/InitialDepAmt&gt;
+                    &lt;CurrDepAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/CurrDepAmt&gt;
+                    &lt;MaturityAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/MaturityAmt&gt;
+                    &lt;InstlmntPercent&gt;
+                        &lt;value&gt;0.0&lt;/value&gt;
+                    &lt;/InstlmntPercent&gt;
+                    &lt;DepositTerm&gt;
+                        &lt;Days&gt;0&lt;/Days&gt;
+                        &lt;Months&gt;0&lt;/Months&gt;
+                    &lt;/DepositTerm&gt;
+                    &lt;InstlmntInd/&gt;
+                    &lt;InstlmntAmt&gt;
+                        &lt;amountValue&gt;0.0&lt;/amountValue&gt;
+                        &lt;currencyCode/&gt;
+                    &lt;/InstlmntAmt&gt;
+                &lt;/TUDepAcctInfo&gt;
+                &lt;DispBlockAmt/&gt;
+                &lt;MinStmtFreqRequired&gt;N&lt;/MinStmtFreqRequired&gt;
+                &lt;MinStmtFreqPeriod&gt;
+                    &lt;Months&gt;0&lt;/Months&gt;
+                    &lt;Days&gt;0&lt;/Days&gt;
+                &lt;/MinStmtFreqPeriod&gt;
+            &lt;/AcctInqRs&gt;
+            &lt;AcctInq_CustomData/&gt;
+        &lt;/AcctInqResponse&gt;
+    &lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="AddLIEN" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml AcctLienAdd.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;AcctLienAdd&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;AcctLienAddRequest&gt;
+&lt;AcctLienAddRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+&lt;/AcctId&gt;
+&lt;ModuleType&gt;ULIEN&lt;/ModuleType&gt;
+&lt;LienDtls&gt;
+&lt;NewLienAmt&gt;
+&lt;amountValue&gt;ZAGAMOUNT&lt;/amountValue&gt;
+&lt;currencyCode&gt;ZAGCURRENCY&lt;/currencyCode&gt;
+&lt;/NewLienAmt&gt;
+&lt;LienDt&gt;
+&lt;StartDt&gt;ZAGDATE&lt;/StartDt&gt;
+&lt;/LienDt&gt;
+&lt;ReasonCode&gt;ZAGRSNCODE&lt;/ReasonCode&gt;
+&lt;/LienDtls&gt;
+&lt;/AcctLienAddRq&gt;
+&lt;/AcctLienAddRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="AddNextLien" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml AcctLienMod.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;AcctLienMod&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;AcctLienModRequest&gt;
+&lt;AcctLienModRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+&lt;/AcctId&gt;
+&lt;ModuleType&gt;ULIEN&lt;/ModuleType&gt;
+&lt;LienDtls&gt;
+&lt;NewLienAmt&gt;
+&lt;amountValue&gt;ZAGAMOUNT&lt;/amountValue&gt;
+&lt;currencyCode&gt;ZAGCURRENCY&lt;/currencyCode&gt;
+&lt;/NewLienAmt&gt;
+&lt;LienDt&gt;
+&lt;StartDt&gt;ZAGDATE&lt;/StartDt&gt;
+&lt;/LienDt&gt;
+&lt;ReasonCode&gt;ZAGRSNCODE&lt;/ReasonCode&gt;
+&lt;/LienDtls&gt;
+&lt;/AcctLienModRq&gt;
+&lt;/AcctLienModRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="BalInc" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml BalInq.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_Zag_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;BalInq&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;BalInqRequest&gt;
+&lt;BalInqRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+&lt;BankInfo&gt;
+&lt;BranchId&gt;ZAGBID&lt;/BranchId&gt;
+&lt;/BankInfo&gt;
+&lt;/AcctId&gt;
+&lt;/BalInqRq&gt;
+&lt;/BalInqRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="DelLIEN" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml AcctLienMod.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;AcctLienMod&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;AcctLienModRequest&gt;
+&lt;AcctLienModRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+&lt;/AcctId&gt;
+&lt;ModuleType&gt;ULIEN&lt;/ModuleType&gt;
+&lt;LienDtls&gt;
+&lt;LienId&gt;ZAGLIENID&lt;/LienId&gt;
+&lt;NewLienAmt&gt;
+&lt;currencyCode&gt;ZAGCURRENCY&lt;/currencyCode&gt;
+&lt;/NewLienAmt&gt;
+&lt;ReasonCode&gt;ZAGRSNCODE&lt;/ReasonCode&gt;
+&lt;/LienDtls&gt;
+&lt;/AcctLienModRq&gt;
+&lt;/AcctLienModRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="GetAllLien" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml AcctLienInq.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;AcctLienInq&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;AcctLienInqRequest&gt;
+&lt;AcctLienInqRq&gt;
+&lt;AcctId&gt;
+&lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+&lt;/AcctId&gt;
+&lt;ModuleType&gt;ULIEN&lt;/ModuleType&gt;
+&lt;/AcctLienInqRq&gt;
+&lt;/AcctLienInqRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="LastTransactions" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xsi:schemaLocation="http://www.finacle.com/fixml getLastNTransactions.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;Header&gt;
+&lt;RequestHeader&gt;
+&lt;MessageKey&gt;
+&lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+&lt;ServiceRequestId&gt;getLastNTransactions&lt;/ServiceRequestId&gt;
+&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+&lt;/MessageKey&gt;
+&lt;RequestMessageInfo&gt;
+&lt;BankId&gt;01&lt;/BankId&gt;
+&lt;TimeZone&gt;&lt;/TimeZone&gt;
+&lt;EntityId&gt;&lt;/EntityId&gt;
+&lt;EntityType&gt;&lt;/EntityType&gt;
+&lt;ArmCorrelationId&gt;&lt;/ArmCorrelationId&gt;
+&lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+&lt;/RequestMessageInfo&gt;
+&lt;Security&gt;
+&lt;Token&gt;
+&lt;PasswordToken&gt;
+&lt;UserId&gt;&lt;/UserId&gt;
+&lt;Password&gt;&lt;/Password&gt;
+&lt;/PasswordToken&gt;
+&lt;/Token&gt;
+&lt;FICertToken&gt;&lt;/FICertToken&gt;
+&lt;RealUserLoginSessionId&gt;&lt;/RealUserLoginSessionId&gt;
+&lt;RealUser&gt;&lt;/RealUser&gt;
+&lt;RealUserPwd&gt;&lt;/RealUserPwd&gt;
+&lt;SSOTransferToken&gt;&lt;/SSOTransferToken&gt;
+&lt;/Security&gt;
+&lt;/RequestHeader&gt;
+&lt;/Header&gt;
+&lt;Body&gt;
+&lt;getLastNTransactionsRequest&gt;
+&lt;AccountTransactionList&gt;
+&lt;accountListElement&gt;
+&lt;acid&gt;ZAGACCID&lt;/acid&gt;
+&lt;branchId&gt;ZAGBID&lt;/branchId&gt;
+&lt;/accountListElement&gt;
+&lt;lastNTransactions&gt;ZAGNUMBEROFTRANSACTIONS&lt;/lastNTransactions&gt;
+&lt;/AccountTransactionList&gt;
+&lt;/getLastNTransactionsRequest&gt;
+&lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="SendTransActions" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;FIXML xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://www.finacle.com/fixml executeFinacleScript.xsd"&gt;
+   &lt;Header&gt;
+      &lt;RequestHeader&gt;
+         &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_ADD_Trans_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;XferTrnAdd&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+         &lt;/MessageKey&gt;
+         &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone /&gt;
+            &lt;EntityId /&gt;
+            &lt;EntityType /&gt;
+            &lt;ArmCorrelationId /&gt;
+            &lt;MessageDateTime&gt;ZAGDATE&lt;/MessageDateTime&gt;
+         &lt;/RequestMessageInfo&gt;
+         &lt;Security&gt;
+            &lt;Token&gt;
+               &lt;PasswordToken&gt;
+                  &lt;UserId /&gt;
+                  &lt;Password /&gt;
+               &lt;/PasswordToken&gt;
+            &lt;/Token&gt;
+            &lt;FICertToken /&gt;
+            &lt;RealUserLoginSessionId /&gt;
+            &lt;RealUser /&gt;
+            &lt;RealUserPwd /&gt;
+            &lt;SSOTransferToken /&gt;
+         &lt;/Security&gt;
+      &lt;/RequestHeader&gt;
+   &lt;/Header&gt;
+   &lt;Body&gt;
+      &lt;XferTrnAddRequest&gt;
+         &lt;XferTrnAddRq&gt;
+            &lt;XferTrnHdr&gt;
+               &lt;TrnType&gt;T&lt;/TrnType&gt;
+               &lt;TrnSubType&gt;CI&lt;/TrnSubType&gt;
+            &lt;/XferTrnHdr&gt;
+            &lt;XferTrnDetail&gt;
+              ZAGLEGS
+             &lt;/XferTrnDetail&gt;
+         &lt;/XferTrnAddRq&gt;
+         &lt;XferTrnAdd_CustomData&gt;
+            ZAGTAIL
+         &lt;/XferTrnAdd_CustomData&gt;
+      &lt;/XferTrnAddRequest&gt;
+   &lt;/Body&gt;
+&lt;/FIXML&gt;</value>
+  </data>
+  <data name="TransLeg" xml:space="preserve">
+    <value>&lt;PartTrnRec&gt;
+                  &lt;AcctId&gt;
+                     &lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+					 &lt;AcctCurr&gt;ZAG1CURRENCY&lt;/AcctCurr&gt;
+                  &lt;/AcctId&gt;
+                  &lt;CreditDebitFlg&gt;ZAGFLAG&lt;/CreditDebitFlg&gt;
+                  &lt;TrnAmt&gt;
+                     &lt;amountValue&gt;ZAGAMOUNT&lt;/amountValue&gt;
+                     &lt;currencyCode&gt;ZAGCURRENCY&lt;/currencyCode&gt;
+                  &lt;/TrnAmt&gt;
+                  &lt;TrnParticulars&gt;ZAGTRNPRT&lt;/TrnParticulars&gt;
+                  &lt;ValueDt&gt;ZAGDATE&lt;/ValueDt&gt;
+				  &lt;Rate&gt;ZAGRATE&lt;/Rate&gt;
+				  &lt;RateCode&gt;ZAG1RATECODE&lt;/RateCode&gt;
+                  &lt;SERIALNUM&gt;ZAGSERIAL&lt;/SERIALNUM&gt;
+               &lt;/PartTrnRec&gt;</value>
+  </data>
+  <data name="TransTail" xml:space="preserve">
+    <value>&lt;PARTTRAN isMultiRec="Y"&gt;
+               &lt;SERIALNUM&gt;ZAGSERIAL&lt;/SERIALNUM&gt;
+      &lt;TranParticularCode&gt;ZAGPURPOSCODE&lt;/TranParticularCode&gt;
+               &lt;TranParticulars2&gt;ZAGEMP&lt;/TranParticulars2&gt;
+			   &lt;RefNum&gt;ZAGID&lt;/RefNum&gt;
+&lt;DiaryNum/&gt;
+&lt;TODAllowed&gt;N&lt;/TODAllowed&gt;
+            &lt;/PARTTRAN&gt;</value>
+  </data>
+</root>

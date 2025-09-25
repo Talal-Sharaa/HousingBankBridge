@@ -1,0 +1,1964 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VDS.Web.Server</name>
+    </assembly>
+    <members>
+        <member name="T:VDS.Web.Configuration.IConfigurationLoader">
+            <summary>
+            Interface for loaders that understand how to load configuration nodes
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.IConfigurationLoader.Load(System.Xml.XmlNode,VDS.Web.HttpServer)">
+            <summary>
+            Loads configuration for the given node and applies it to a given server
+            </summary>
+            <param name="node">Node</param>
+            <param name="server">Server</param>
+        </member>
+        <member name="T:VDS.Web.Configuration.MimeTypeManager">
+            <summary>
+            Class for managing MIME types which are used to determine what static content the server can serve
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.#ctor">
+            <summary>
+            Creates a new MIME Type manager using the default mappings
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.#ctor(System.Boolean)">
+            <summary>
+            Creates a new MIME Type manager optionally using default mappings
+            </summary>
+            <param name="useDefaults">Whether to use defaults</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.InitialiseWithDefaults">
+            <summary>
+            Initialises the manager with default MIME type mappings
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.AddMimeType(VDS.Web.Configuration.MimeTypeMapping)">
+            <summary>
+            Adds a MIME Type
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.AddMimeType(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a MIME Type
+            </summary>
+            <param name="extension">File Extension</param>
+            <param name="binary">MIME Type</param>
+            <param name="mimeType">Whether the content is binary</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.AddMimeType(System.String,System.String)">
+            <summary>
+            Adds a MIME Type
+            </summary>
+            <param name="extension">File Extension</param>
+            <param name="mimeType">MIME Type</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.RemoveMimeType(VDS.Web.Configuration.MimeTypeMapping)">
+            <summary>
+            Removes a MIME Type
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.RemoveMimeType(System.String)">
+            <summary>
+            Removes a MIME Type
+            </summary>
+            <param name="extension">File Extension</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeManager.GetMapping(System.String)">
+            <summary>
+            Gets a Mapping
+            </summary>
+            <param name="extension">File Extension</param>
+            <returns>Mapping or null if none found</returns>
+        </member>
+        <member name="T:VDS.Web.Configuration.ServerConfiguration">
+            <summary>
+            Static Helper class used for configuring the server
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.NamespaceUri">
+            <summary>
+            Constant for the Configuration Namespace URI
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.SchemaLocation">
+            <summary>
+            Constant for the Schema Location that should be used in xsi:schemaLocation attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementServer">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementAppSettings">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementAdd">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementMimeTypes">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementMimeType">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementVirtualDirectories">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementVirtualDirectory">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementModules">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementModule">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementPreRequest">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementPreResponse">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementHandlers">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementHandler">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementLoggers">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementConsole">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementFile">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementProcess">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementEvent">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementMulticast">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementExtensions">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.ElementExtension">
+            <summary>
+            Constants for configuration elements
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeBaseDir">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeKey">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeValue">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributePath">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeDirectory">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeType">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeVerb">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeFile">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeFormat">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeSource">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeLoadWith">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeUseDefault">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeBinary">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Configuration.ServerConfiguration.AttributeExtension">
+            <summary>
+            Constants for configuration attributes
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.ServerConfiguration.Configure(VDS.Web.HttpServer,System.String)">
+            <summary>
+            Configures the server
+            </summary>
+            <param name="server">Server</param>
+            <param name="file">Configuration File</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.ServerConfiguration.Configure(VDS.Web.HttpServer,System.Xml.XmlDocument)">
+            <summary>
+            Configures the server
+            </summary>
+            <param name="server">Server</param>
+            <param name="config">XML Configuration</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.ServerConfiguration.Validate(System.String)">
+            <summary>
+            Validates whether a given XML configuration file according to the schema
+            </summary>
+            <param name="file">File</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.ServerConfiguration.Validate(System.IO.Stream)">
+            <summary>
+            Validates whether a given XML configuration file is valid according to the schema
+            </summary>
+            <param name="input">Input Stream</param>
+        </member>
+        <member name="T:VDS.Web.Configuration.VirtualDirectoryManager">
+            <summary>
+            Manager for Virtual Directoreis
+            </summary>
+            <remarks>
+            Supports nested virtual paths, will always try to match the longest path first.  For example if you have /path/ and /path/other/ a request to /path/other/index.html would map to the latter rather than the former even if the former had a physical directory called other in it
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryManager.AddVirtualDirectory(System.String,System.String)">
+            <summary>
+            Adds a virtual directory
+            </summary>
+            <param name="path">Virtual Path</param>
+            <param name="directory">Physical Path</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryManager.AddVirtualDirectory(VDS.Web.Configuration.VirtualDirectoryMapping)">
+            <summary>
+            Adds a virtual directory
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryManager.RemoveVirtualDirectory(System.String)">
+            <summary>
+            Removes a virtual directory
+            </summary>
+            <param name="path">Virtual Path</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryManager.RemoveVirtualDirectory(VDS.Web.Configuration.VirtualDirectoryMapping)">
+            <summary>
+            Removes a virtual directory
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryManager.GetDirectory(System.String,System.String@)">
+            <summary>
+            Tries to get a directory for the specified path returning null if no such directory exists
+            </summary>
+            <param name="path">Virtual Path</param>
+            <param name="modPath">The path relative to the virtual directory</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.Web.Configuration.VirtualDirectoryComparer">
+            <summary>
+            Comparer for virtual directories which ensure the longest paths appear first in the sort order
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryComparer.Compare(System.String,System.String)">
+            <summary>
+            Compares two paths based on length
+            </summary>
+            <param name="x">Path 1</param>
+            <param name="y">Path 2</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.Web.Configuration.VirtualDirectoryMapping">
+            <summary>
+            Represents a Virtual Directory mapping
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.VirtualDirectoryMapping.#ctor(System.String,System.String)">
+            <summary>
+            Creates a Virtual Directory mapping
+            </summary>
+            <param name="path">Virtual Path</param>
+            <param name="directory">Physical Path</param>
+            <remarks>
+            Enforces a number of constraints on the virtual and physical paths:
+            <ul>
+                <li>Virtual Path cannot be null</li>
+                <li>Virtual Paths must start and end with the / character</li>
+                <li>You cannot make the root path (the single / character) a virtual directory</li>
+                <li>Physical Path cannot be null</li>
+                <li>Physical Path must be a directory that exists</li>
+            </ul>
+            </remarks>
+        </member>
+        <member name="P:VDS.Web.Configuration.VirtualDirectoryMapping.Path">
+            <summary>
+            Gets the Virtual Path
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Configuration.VirtualDirectoryMapping.Directory">
+            <summary>
+            Gets the Physical Path
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.BaseConsole">
+            <summary>
+            Abstract base class for consoles which prettifies the output with timestamps and type prefixes
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.IServerConsole">
+            <summary>
+            Interface for server consoles
+            </summary>
+        </member>
+        <member name="T:VDS.Web.ILifecycleAwareComponent">
+            <summary>
+            Interface for server components that need to respect the server lifecycle
+            </summary>
+        </member>
+        <member name="M:VDS.Web.ILifecycleAwareComponent.PreStateChange(VDS.Web.HttpServer,VDS.Web.ServerState)">
+            <summary>
+            Invoked when the server is about to transition from one state to another
+            </summary>
+            <param name="server">HTTP Server</param>
+            <param name="target">State the server will transition to</param>
+        </member>
+        <member name="M:VDS.Web.ILifecycleAwareComponent.PostStateChange(VDS.Web.HttpServer)">
+            <summary>
+            Invoked after the server has changed state
+            </summary>
+            <param name="server">HTTP Server</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Information(System.String)">
+            <summary>
+            Write an information message to the console
+            </summary>
+            <param name="message">Information message</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Warning(System.String)">
+            <summary>
+            Writes a warning to the console
+            </summary>
+            <param name="message">Warning message</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Warning(System.String,System.Exception)">
+            <summary>
+            Writes a warning to the console
+            </summary>
+            <param name="message">Warning Message</param>
+            <param name="e">Error that caused the warning to be issued</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Error(System.String)">
+            <summary>
+            Writes an error to the console
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Error(System.String,System.Exception)">
+            <summary>
+            Writes an error to the console
+            </summary>
+            <param name="message">Error Message</param>
+            <param name="e">Error</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.IServerConsole.Error(System.Exception)">
+            <summary>
+            Writes an error to the console
+            </summary>
+            <param name="e">Error</param>
+        </member>
+        <member name="F:VDS.Web.Consoles.BaseConsole.ErrorPrefix">
+            <summary>
+            Constants for prefixes applied to console messages
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Consoles.BaseConsole.WarnPrefix">
+            <summary>
+            Constants for prefixes applied to console messages
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Consoles.BaseConsole.InformationPrefix">
+            <summary>
+            Constants for prefixes applied to console messages
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Consoles.BaseConsole.DebugPrefix">
+            <summary>
+            Constants for prefixes applied to console messages
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Consoles.BaseConsole.GetFullStackTrace(System.Exception)">
+            <summary>
+            Helper method which returns the full stack trace for an exception
+            </summary>
+            <param name="e">Exception</param>
+            <returns>Full Stack Trace</returns>
+        </member>
+        <member name="T:VDS.Web.Consoles.DebugConsole">
+            <summary>
+            A server console which writes to the debug output
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Consoles.DebugConsole.Dispose">
+            <summary>
+            Disposes of the console
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.EventConsole">
+            <summary>
+            A server console that writes to the System Event Log
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.FileConsole">
+            <summary>
+            A server console which writes to a file
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.StreamConsole">
+            <summary>
+            A server console which writes to a stream
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Consoles.StreamConsole.#ctor(System.IO.Stream)">
+            <summary>
+            Creates a new server console on a stream
+            </summary>
+            <param name="stream">Stream</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.StreamConsole.#ctor(System.IO.StreamWriter)">
+            <summary>
+            Creates a new stream console on an existing writer
+            </summary>
+            <param name="writer">Stream Writer</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.StreamConsole.#ctor(System.IO.TextWriter)">
+            <summary>
+            Creates a new stream console on an existing writer
+            </summary>
+            <param name="writer">Text Writer</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.StreamConsole.Dispose">
+            <summary>
+            Disposes of the console
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Consoles.FileConsole.#ctor(System.String)">
+            <summary>
+            Creates a new file console
+            </summary>
+            <param name="file">File</param>
+        </member>
+        <member name="M:VDS.Web.Consoles.FileConsole.OpenFileStream(System.String)">
+            <summary>
+            Helper method for setting up the file stream
+            </summary>
+            <param name="file">File</param>
+            <returns>File stream</returns>
+        </member>
+        <member name="T:VDS.Web.Consoles.MulticastConsole">
+            <summary>
+            A console which wraps a set of consoles and sends requests to all wrapped consoles
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.NullConsole">
+            <summary>
+            A server console which does nothing
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Consoles.ProcessConsole">
+            <summary>
+            A server console which writes to the processes standard out and error as appropriate
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Handlers.DirectoryListingHandler">
+            <summary>
+            A Handler for generating directory listings
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Handlers.IHttpListenerHandler">
+            <summary>
+            Interface for Handlers which handle requests made to a <see cref="T:System.Net.HttpListener">HttpListener</see>
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandler.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Processes a HTTP Request
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="P:VDS.Web.Handlers.IHttpListenerHandler.IsReusable">
+            <summary>
+            Gets whether the Handlers can be reused
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Handlers.DirectoryListingHandler.DirectoryListModeDisabled">
+            <summary>
+            Constant indicating that Directory Listing is Disabled
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Handlers.DirectoryListingHandler.DirectoryListModePartial">
+            <summary>
+            Constant indicating that Directory Listing is set to Partial (default)
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Handlers.DirectoryListingHandler.DirectoryListModeFull">
+            <summary>
+            Constant indicating that Directory Listing is set to Full
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.DirectoryListingHandler.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Processes a request
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="P:VDS.Web.Handlers.DirectoryListingHandler.IsReusable">
+            <summary>
+            Indicates that the handler is reusable
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Handlers.IHttpListenerHandlerCollection">
+            <summary>
+            Interface represents a collection of mappings for handlers
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.AddMapping(VDS.Web.HttpRequestMapping)">
+            <summary>
+            Adds a mapping
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.GetHandler(VDS.Web.HttpServerContext)">
+            <summary>
+            Gets a Handler based on the current server context
+            </summary>
+            <param name="context">Server Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.GetHandler(System.Type)">
+            <summary>
+            Gets a Handler based on the given type
+            </summary>
+            <param name="handlerType">Handler Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.InsertMapping(VDS.Web.HttpRequestMapping,System.Int32)">
+            <summary>
+            Inserts a mapping into the collection
+            </summary>
+            <param name="mapping">Mapping</param>
+            <param name="insertAt">Index to insert at</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.RemoveMapping(VDS.Web.HttpRequestMapping)">
+            <summary>
+            Removes a mapping from the collection
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.IHttpListenerHandlerCollection.RemoveMapping(System.Int32)">
+            <summary>
+            Removes a mapping at the given index
+            </summary>
+            <param name="removeAt">Index to remove at</param>
+        </member>
+        <member name="P:VDS.Web.Handlers.IHttpListenerHandlerCollection.Count">
+            <summary>
+            Gets the size of the collection
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Handlers.RestControlHandler">
+            <summary>
+            Handler that provides basic REST control of the server
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.RestControlHandler.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Processes a request
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="P:VDS.Web.Handlers.RestControlHandler.IsReusable">
+            <summary>
+            Gets that the Handler is reusable
+            </summary>
+        </member>
+        <member name="T:VDS.Web.HttpServerContext">
+            <summary>
+            Represents the Server Context for a request
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServerContext.#ctor(VDS.Web.HttpServer,System.Net.HttpListenerContext)">
+            <summary>
+            Creates a new Server Context
+            </summary>
+            <param name="server">Server</param>
+            <param name="context">Listener Context</param>
+        </member>
+        <member name="P:VDS.Web.HttpServerContext.Server">
+            <summary>
+            Gets the Server processing this request
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServerContext.Request">
+            <summary>
+            Gets the request
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServerContext.Response">
+            <summary>
+            Gets the response
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServerContext.User">
+            <summary>
+            Gets the User
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServerContext.InnerContext">
+            <summary>
+            Gets the Listener Context
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Logging.ApacheStyleLogger">
+            <summary>
+            An Apache style Logger
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Logging.IHttpLogger">
+            <summary>
+            Interface for loggers that log HTTP requests
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.IHttpLogger.LogRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Log a request
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="F:VDS.Web.Logging.ApacheStyleLogger.ClfDateFormat">
+            <summary>
+            Constant for Date Format used in Common Log Format
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Logging.ApacheStyleLogger.LogCommon">
+            <summary>
+            Constant for Common Log Format
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Logging.ApacheStyleLogger.LogCombined">
+            <summary>
+            Constant for Combined Log Format
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Logging.ApacheStyleLogger.LogAll">
+            <summary>
+            Constant for Logging all available fields
+            </summary>
+        </member>
+        <member name="F:VDS.Web.Logging.ApacheStyleLogger.LogUserAgent">
+            <summary>
+            Constant for User Agent Log
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.#ctor(System.String)">
+            <summary>
+            Creates a new Apache style Logger
+            </summary>
+            <param name="logFormatString">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.#ctor">
+            <summary>
+            Creates a new Apache style logger using the Common Log format
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.GetLogFormat(System.String)">
+            <summary>
+            Helper method to convert string format names into Log Formats
+            </summary>
+            <param name="format">Log Format Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.LogRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Logs a request
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.AppendToLog(System.String)">
+            <summary>
+            Appends to the log
+            </summary>
+            <param name="line">Line to append</param>
+            <remarks>
+            Abstract so that derived implementations can log to whatever target they want
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.PreStateChange(VDS.Web.HttpServer,VDS.Web.ServerState)">
+            <summary>
+            Handles the server pre-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+            <param name="target">State being transitioned to</param>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.PostStateChange(VDS.Web.HttpServer)">
+            <summary>
+            Handles the server post-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+        </member>
+        <member name="M:VDS.Web.Logging.ApacheStyleLogger.Dispose">
+            <summary>
+            Disposes of the logger
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Logging.ConsoleLogger">
+            <summary>
+            An Apache style Logger which logs to the console
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.ConsoleLogger.#ctor(System.String)">
+            <summary>
+            Creates a new Logger
+            </summary>
+            <param name="logFormatString">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.ConsoleLogger.#ctor">
+            <summary>
+            Creates a new Logger using Common Log format
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.ConsoleLogger.AppendToLog(System.String)">
+            <summary>
+            Appends log lines to the console
+            </summary>
+            <param name="line">Log line</param>
+        </member>
+        <member name="T:VDS.Web.Logging.EventLogger">
+            <summary>
+            An Apache Style logger that logs HTTP requests to the System Event Log
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.EventLogger.#ctor">
+            <summary>
+            Creates a new Event Logger
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.EventLogger.#ctor(System.String)">
+            <summary>
+            Creates a new Event Logger
+            </summary>
+            <param name="source">Source</param>
+        </member>
+        <member name="M:VDS.Web.Logging.EventLogger.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Event Logger
+            </summary>
+            <param name="source">Source</param>
+            <param name="format">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.EventLogger.AppendToLog(System.String)">
+            <summary>
+            Appends log lines to the System Event Log
+            </summary>
+            <param name="line">Log Line</param>
+        </member>
+        <member name="T:VDS.Web.Logging.FileLogger">
+            <summary>
+            An Apache style Logger which logs to files
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Logging.StreamLogger">
+            <summary>
+            An Apache style Logger which logs to a stream
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.#ctor(System.IO.StreamWriter,System.String)">
+            <summary>
+            Creates a new logger
+            </summary>
+            <param name="writer">Stream Writer</param>
+            <param name="logFormatString">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.#ctor(System.IO.StreamWriter)">
+            <summary>
+            Creates a new logger
+            </summary>
+            <param name="writer">Stream Writer</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.#ctor(System.IO.Stream)">
+            <summary>
+            Creates a new logger
+            </summary>
+            <param name="stream">Stream</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.#ctor(System.IO.Stream,System.String)">
+            <summary>
+            Creates a new logger
+            </summary>
+            <param name="stream">Stream</param>
+            <param name="logFormatString">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.AppendToLog(System.String)">
+            <summary>
+            Appends log lines to the stream
+            </summary>
+            <param name="line">Log line</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.RestartStream">
+            <summary>
+            Method which returns the stream writer to use
+            </summary>
+            <returns></returns>
+            <remarks>
+            Only invoked if the implementation indicates that it wants the writer to be closed when the server transitions to the Stopped/Disposed state
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.PostStateChange(VDS.Web.HttpServer)">
+            <summary>
+            Handles the server post-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+            <remarks>
+            If the <see cref="P:VDS.Web.Logging.StreamLogger.ShouldClose"/> property has been overridden to return true and the server state is now Stopped/Disposed then the logger will close the writer
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.PostStateChangeInternal(VDS.Web.HttpServer)">
+            <summary>
+            Method which derived classes may override to add their own post-state change logic
+            </summary>
+            <param name="server">HTTP Server</param>
+        </member>
+        <member name="M:VDS.Web.Logging.StreamLogger.Dispose">
+            <summary>
+            Disposes of the logger
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Logging.StreamLogger.ShouldClose">
+            <summary>
+            Gets whether the writer should be closed when the server transitions to Closed/Disposed state
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Logging.FileLogger.#ctor(System.String)">
+            <summary>
+            Creates a new Logger
+            </summary>
+            <param name="logFile">Log File</param>
+        </member>
+        <member name="M:VDS.Web.Logging.FileLogger.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Logger
+            </summary>
+            <param name="logFile">Log File</param>
+            <param name="logFormatString">Log Format</param>
+        </member>
+        <member name="M:VDS.Web.Logging.FileLogger.RestartStream">
+            <summary>
+            Reopens the log file
+            </summary>
+            <returns>Log File stream</returns>
+        </member>
+        <member name="M:VDS.Web.Logging.FileLogger.OpenFileStream(System.String)">
+            <summary>
+            Helper method for setting up the file stream
+            </summary>
+            <param name="logFile">Log File</param>
+            <returns>Log File stream</returns>
+        </member>
+        <member name="P:VDS.Web.Logging.FileLogger.ShouldClose">
+            <summary>
+            Indicates that the logger should close the stream when the server transitions to a stopped/disposed state
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Modules.IHttpListenerModule">
+            <summary>
+            Interface for Modules which can be used to modify the request/response as desired
+            </summary>
+            <remarks>
+            <para>
+            Modules are either applied Pre-Request (i.e. before a <see cref="T:VDS.Web.Handlers.IHttpListenerHandler">IHttpListenerHandler</see> is selected to provide the actual response) or Pre-Response (i.e. before the response object is closed and sent to the client)
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Modules.IHttpListenerModule.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Processes a Request and returns false if no further handling of the request should take place
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+            <remarks>
+            <para>
+            If used as a Pre-Request Module returning false will cause the actual process request step where a <see cref="T:VDS.Web.Handlers.IHttpListenerHandler">IHttpListenerHandler</see> is applied to be skipped as well as any further pre-request modules
+            </para>
+            <para>
+            If used as a Pre-Response Module returning false will cause any further Pre-Response modules to be skipped
+            </para>
+            </remarks>
+        </member>
+        <member name="T:VDS.Web.Handlers.StaticFileHandler">
+            <summary>
+            A HTTP Listener Handler which serves a variety of File Formats as Plain Text/Binary Data
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.StaticFileHandler.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Processes requests for static files
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="P:VDS.Web.Handlers.StaticFileHandler.IsReusable">
+            <summary>
+            Gets that the Handler is reusable
+            </summary>
+        </member>
+        <member name="T:VDS.Web.FormVariables">
+            <summary>
+            Represents the set of Form Variables because the <see cref="T:System.Net.HttpListenerContext">HttpListenerContext</see> does not do this for us
+            </summary>
+        </member>
+        <member name="F:VDS.Web.FormVariables.WWWFormURLEncoded">
+            <summary>
+            MIME Type for URL Encoded WWW Form Content used when POSTing over HTTP
+            </summary>
+        </member>
+        <member name="M:VDS.Web.FormVariables.#ctor(VDS.Web.HttpServerContext)">
+            <summary>
+            Creates a new set of Form Variables
+            </summary>
+            <param name="context">Context</param>
+        </member>
+        <member name="M:VDS.Web.FormVariables.#ctor(System.Net.HttpListenerContext)">
+            <summary>
+            Creates a new set of Form Variables
+            </summary>
+            <param name="context">Context</param>
+        </member>
+        <member name="M:VDS.Web.FormVariables.GetValues(System.String)">
+            <summary>
+            Gets all values for a Variable
+            </summary>
+            <param name="name">Variable</param>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.Web.FormVariables.IsValid">
+            <summary>
+            Gets whether the form variables were well formed
+            </summary>
+        </member>
+        <member name="P:VDS.Web.FormVariables.IsEmpty">
+            <summary>
+            Gets whether there were any form variables
+            </summary>
+        </member>
+        <member name="P:VDS.Web.FormVariables.Count">
+            <summary>
+            Gets the number of form variables
+            </summary>
+        </member>
+        <member name="P:VDS.Web.FormVariables.Item(System.String)">
+            <summary>
+            Gets a Variable
+            </summary>
+            <param name="name">Variable Name</param>
+            <returns></returns>
+            <remarks>
+            If there are multiple values for this variable only the first is returned by this method
+            </remarks>
+        </member>
+        <member name="T:VDS.Web.Handlers.HttpListenerHandlerCollection">
+            <summary>
+            Class representing a collection of mappings to Handlers
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.AddMapping(VDS.Web.HttpRequestMapping)">
+            <summary>
+            Adds a mapping
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.InsertMapping(VDS.Web.HttpRequestMapping,System.Int32)">
+            <summary>
+            Inserts a mapping
+            </summary>
+            <param name="mapping">Mapping</param>
+            <param name="insertAt">Index to insert at</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.RemoveMapping(VDS.Web.HttpRequestMapping)">
+            <summary>
+            Removes a Mapping
+            </summary>
+            <param name="mapping">Mapping</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.RemoveMapping(System.Int32)">
+            <summary>
+            Removes a Mapping
+            </summary>
+            <param name="removeAt">Index to remove at</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.GetHandler(VDS.Web.HttpServerContext)">
+            <summary>
+            Gets a Handler based on the given server context
+            </summary>
+            <param name="context">Server Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.GetHandler(System.Type)">
+            <summary>
+            Gets a Handler based on the given Type
+            </summary>
+            <param name="handlerType">Handler Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.DiscardState">
+            <summary>
+            Discards all cached handlers
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.GetEnumerator">
+            <summary>
+            Gets an enumerator over the mappings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets an enumerator over the mappings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.PreStateChange(VDS.Web.HttpServer,VDS.Web.ServerState)">
+            <summary>
+            Handles the server pre-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+            <param name="target">State the server is transitioning to</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.PostStateChange(VDS.Web.HttpServer)">
+            <summary>
+            Handles the server post-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+        </member>
+        <member name="M:VDS.Web.Handlers.HttpListenerHandlerCollection.Dispose">
+            <summary>
+            Disposes of the handlers collection
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Handlers.HttpListenerHandlerCollection.Count">
+            <summary>
+            Gets the size of the collection
+            </summary>
+        </member>
+        <member name="T:VDS.Web.PathMode">
+            <summary>
+            Possible Modes for Paths
+            </summary>
+        </member>
+        <member name="F:VDS.Web.PathMode.Unknown">
+            <summary>
+            Unknown - if Path Mode is this a Handler Mapping will not accept any requests
+            </summary>
+        </member>
+        <member name="F:VDS.Web.PathMode.All">
+            <summary>
+            The Handler processes all Requests regardless of Path provided they meet the Verb criteria
+            </summary>
+        </member>
+        <member name="F:VDS.Web.PathMode.Extension">
+            <summary>
+            The Handler processes all Requests to a specific file extension
+            </summary>
+        </member>
+        <member name="F:VDS.Web.PathMode.FixedPath">
+            <summary>
+            The Handler processes all Requests to a fixed path
+            </summary>
+        </member>
+        <member name="F:VDS.Web.PathMode.WildcardPath">
+            <summary>
+            The Handler processes all Requests under a path
+            </summary>
+        </member>
+        <member name="T:VDS.Web.HttpRequestMapping">
+            <summary>
+            Mapping from a Request Verb and Path to a <see cref="T:VDS.Web.Handlers.IHttpListenerHandler">IHttpListenerHandler</see>
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpRequestMapping.AllVerbs">
+            <summary>
+            Constant for specifying that the mapping applies for All HTTP Verbs
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpRequestMapping.AnyPath">
+            <summary>
+            Constant for specifying that the mapping applies to Any Path
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpRequestMapping.NoVerbs">
+            <summary>
+            Constant for specifying that the mapping is never directly applied (use when the Handler may be invoked via <see cref="M:VDS.Web.HttpServer.RemapHandler(VDS.Web.HttpServerContext,System.Type)">HttpServer.RemapHandler()</see> but should not be invoked normally
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpRequestMapping.#ctor(System.String,System.String,System.Type)">
+            <summary>
+            Creates a new Request Mapping
+            </summary>
+            <param name="verb">HTTP Verbs (comma separated)</param>
+            <param name="path">URL Path</param>
+            <param name="handlerType">Handler Type</param>
+        </member>
+        <member name="M:VDS.Web.HttpRequestMapping.CreateHandlerInstance">
+            <summary>
+            Creates a new instance of the Handler this mapping refers to
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.HttpRequestMapping.AcceptsRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Determines whether this mapping accepts the request
+            </summary>
+            <param name="context">HTTP Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.HttpRequestMapping.AcceptsVerb(System.String)">
+            <summary>
+            Determines whether this mapping accepts the HTTP verb
+            </summary>
+            <param name="verb">HTTP verb</param>
+            <returns></returns>
+        </member>
+        <member name="P:VDS.Web.HttpRequestMapping.HandlerType">
+            <summary>
+            Gets the Type of the Handler
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpRequestMapping.AcceptedVerbs">
+            <summary>
+            Gets the Accepted Verbs
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpRequestMapping.AcceptedPath">
+            <summary>
+            Gets the Accepted Path
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpRequestMapping.AcceptedPathMode">
+            <summary>
+            Gets the Accepted Path Mode
+            </summary>
+        </member>
+        <member name="T:VDS.Web.HttpServer">
+            <summary>
+            A simple but extensible HTTP Server based on a <see cref="T:System.Net.HttpListener">HttpListener</see>
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpServer.AnyHost">
+            <summary>
+            Constant for using accepting requests to the port from any host name
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpServer.DefaultHost">
+            <summary>
+            Constant for the Default Host used if none is specified (localhost)
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpServer.DefaultPort">
+            <summary>
+            Constant for the Default Port used if none is specified (80)
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpServer.DefaultConfigurationFile">
+            <summary>
+            Constant for the Default Configuration File used
+            </summary>
+        </member>
+        <member name="F:VDS.Web.HttpServer.DefaultEventSource">
+            <summary>
+            Constant for default event source for System Event Log based logging
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String)">
+            <summary>
+            Creates a new Server with the given host
+            </summary>
+            <param name="host">Host</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Boolean)">
+            <summary>
+            Creates a new Server with the given host and optionally starts the server
+            </summary>
+            <param name="host">Host</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,VDS.Web.Handlers.HttpListenerHandlerCollection)">
+            <summary>
+            Creates a new Server with the given handlers
+            </summary>
+            <param name="host">Host</param>
+            <param name="handlers">Handlers</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32)">
+            <summary>
+            Creates a new Server on the given port
+            </summary>
+            <param name="port">Port</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32,System.Boolean)">
+            <summary>
+            Creates a new Server on the given port and optionally starts the server
+            </summary>
+            <param name="port">Port</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32,VDS.Web.Handlers.IHttpListenerHandlerCollection)">
+            <summary>
+            Creates a new Server on the given port with the given handlers
+            </summary>
+            <param name="port">Port</param>
+            <param name="handlers">Handlers</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,VDS.Web.Handlers.IHttpListenerHandlerCollection,System.Boolean)">
+            <summary>
+            Creates a new Server on the given host with the given handlers
+            </summary>
+            <param name="host">Host</param>
+            <param name="handlers">Handlers</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32,VDS.Web.Handlers.IHttpListenerHandlerCollection,System.Boolean)">
+            <summary>
+            Creates a new Server on the given port with the given handlers
+            </summary>
+            <param name="port">Port</param>
+            <param name="handlers">Handlers</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a new Server on the given host and port
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Creates a new Server on the given host and port and optionally starts the server
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32,VDS.Web.Handlers.IHttpListenerHandlerCollection)">
+            <summary>
+            Creates a new Server on the given host and port with the given handlers
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <param name="handlers">Handlers</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32,VDS.Web.Handlers.IHttpListenerHandlerCollection,System.Boolean)">
+            <summary>
+            Creates a new Server on the given host and port with the given handlers and optionally starts the server
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <param name="handlers">Handlers</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Creates a new Server on the given host and port using a specified configuration file and optionally starts the server
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <param name="configFile">Configuration File</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new Server on the given host and port using a specified configuration file
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+            <param name="configFile">Configuration File</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new Server on the given host using a specified configuration file and optionally starts the server
+            </summary>
+            <param name="host">Host</param>
+            <param name="configFile">Configuration File</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new Server on the given host using a specified configuration file
+            </summary>
+            <param name="host">Host</param>
+            <param name="configFile">Configuration File</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Creates a new Server on the given port using a specified configuration file and optionally starts the server
+            </summary>
+            <param name="port">Port</param>
+            <param name="configFile">Configuration File</param>
+            <param name="autostart">Whether to auto-start</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates a new Server on the given port using a specified configuration file
+            </summary>
+            <param name="port">Port</param>
+            <param name="configFile">Configuration File</param>
+            <remarks>
+            Must be explicitly started
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Finalize">
+            <summary>
+            Destructor which ensures the server is cleaned up
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Initialise(System.String,System.Int32)">
+            <summary>
+            Initialisation of the Server
+            </summary>
+            <param name="host">Host</param>
+            <param name="port">Port</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddVirtualDirectory(System.String,System.String)">
+            <summary>
+            Adds a virtual directory to the Server
+            </summary>
+            <param name="path">Virtual Path</param>
+            <param name="directory">Physical Directory</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddMimeType(System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a MIME Type to the Server
+            </summary>
+            <param name="ext">File Extension</param>
+            <param name="mimeType">MIME Type</param>
+            <param name="binary">Whether the type should be treated as binary content</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddMimeType(System.String,System.String)">
+            <summary>
+            Adds a MIME Type to the Server
+            </summary>
+            <param name="ext">File Extension</param>
+            <param name="mimeType">MIME Type</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddPreRequestModule(VDS.Web.Modules.IHttpListenerModule)">
+            <summary>
+            Adds a pre-request module to the Server
+            </summary>
+            <param name="module">Module</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddPreResponseModule(VDS.Web.Modules.IHttpListenerModule)">
+            <summary>
+            Adds a pre-response module to the Server
+            </summary>
+            <param name="module">Module</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.InsertPreRequestModule(VDS.Web.Modules.IHttpListenerModule,System.Int32)">
+            <summary>
+            Inserts a pre-request module to the Server
+            </summary>
+            <param name="module">Module</param>
+            <param name="insertAt">Index to insert at</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.InsertPreResponseModule(VDS.Web.Modules.IHttpListenerModule,System.Int32)">
+            <summary>
+            Inserts a pre-response module to the Server
+            </summary>
+            <param name="module">Module</param>
+            <param name="insertAt">Index to insert at</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.RemovePreRequestModule(VDS.Web.Modules.IHttpListenerModule)">
+            <summary>
+            Removes a pre-request module to the Server
+            </summary>
+            <param name="module">Module</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.RemovePreResponseModule(VDS.Web.Modules.IHttpListenerModule)">
+            <summary>
+            Removes a pre-response module to the Server
+            </summary>
+            <param name="module">Module</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.ClearPreRequestModules">
+            <summary>
+            Removes all pre-request modules
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.ClearPreResponseModules">
+            <summary>
+            Removes all pre-response modules
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.AddLogger(VDS.Web.Logging.IHttpLogger)">
+            <summary>
+            Adds a Logger
+            </summary>
+            <param name="logger">Logger</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.InsertLogger(VDS.Web.Logging.IHttpLogger,System.Int32)">
+            <summary>
+            Inserts a Logger
+            </summary>
+            <param name="logger">Logger</param>
+            <param name="insertAt">Index to insert at</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.RemoveLogger(VDS.Web.Logging.IHttpLogger)">
+            <summary>
+            Removes a Logger
+            </summary>
+            <param name="logger">Logger</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.ClearLoggers">
+            <summary>
+            Removes all loggers
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Start">
+            <summary>
+            Starts the Server
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Restart">
+            <summary>
+            Restarts the Server
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Stop">
+            <summary>
+            Stops the Server
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Shutdown(System.Boolean,System.Boolean)">
+            <summary>
+            Shuts down the server and optionally stops the process in which it is running
+            </summary>
+            <param name="stopProcess">Whether to stop the containing process</param>
+            <param name="force">Whether to force the containing process to stop by killing it</param>
+            <remarks>
+            <para>
+            After a Server has been shut down it's methods and properties cannot be accessed
+            </para>
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.HttpServer.PreStateChange(VDS.Web.ServerState)">
+            <summary>
+            Helper method which invokes <see cref="M:VDS.Web.ILifecycleAwareComponent.PreStateChange(VDS.Web.HttpServer,VDS.Web.ServerState)"/> on relevant server components
+            </summary>
+            <param name="target">Target state</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.PostStateChange">
+            <summary>
+            Helper method which invokes <see cref="M:VDS.Web.ILifecycleAwareComponent.PostStateChange(VDS.Web.HttpServer)"/> on relevant server components
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Run">
+            <summary>
+            Actual method which implements the main server process
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.HandleRequest(System.Net.HttpListenerContext)">
+            <summary>
+            Begins request handling
+            </summary>
+            <param name="context">Listener Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.HttpServer.EndRequest(System.IAsyncResult)">
+            <summary>
+            Ends request handling
+            </summary>
+            <param name="result">Async Result</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.ApplyPreRequestModules(VDS.Web.HttpServerContext)">
+            <summary>
+            Applies pre-request modules returning whether actual request handling should be skipped
+            </summary>
+            <param name="context">Server Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.HttpServer.ApplyPreResponseModules(VDS.Web.HttpServerContext)">
+            <summary>
+            Applies pre-response modules
+            </summary>
+            <param name="context">Server Context</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.MapPath(System.String)">
+            <summary>
+            Maps a URL Path to a physical path returning null if no such mapping is possible
+            </summary>
+            <param name="path">URL Path</param>
+            <returns>Either a Physical Path or null is not a valid path</returns>
+        </member>
+        <member name="M:VDS.Web.HttpServer.GetMimeType(System.String)">
+            <summary>
+            Gets the MIME Type for the response based on the file extension or null if the MIME type is not allowed to be served
+            </summary>
+            <param name="extension">File Extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.HttpServer.RemapHandler(VDS.Web.HttpServerContext,System.Type)">
+            <summary>
+            Remaps the Request to another Handler, the Handler must be a registered Handler for remapping to succeed
+            </summary>
+            <param name="context">HTTP Context</param>
+            <param name="handlerType">Handler Type</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.LogError(System.String,System.Exception)">
+            <summary>
+            Log an error
+            </summary>
+            <param name="message">Message</param>
+            <param name="ex">Exception</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.LogError(System.Exception)">
+            <summary>
+            Log an error
+            </summary>
+            <param name="ex">Error</param>
+        </member>
+        <member name="M:VDS.Web.HttpServer.Dispose">
+            <summary>
+            Disposes of the Server, once disposed of a Server instance cannot be reused and its methods will throw <see cref="T:System.ObjectDisposedException"/> if this is attempted
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServer.DisposeInternal(System.Boolean)">
+            <summary>
+            Actually dispose of the Server
+            </summary>
+            <param name="disposing">Whether this was called from the Dispose() method or not</param>
+        </member>
+        <member name="P:VDS.Web.HttpServer.IsRunning">
+            <summary>
+            Gets whether the Server is running
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Port">
+            <summary>
+            Gets the Port the Server is using
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Host">
+            <summary>
+            Gets the Host the Server is using
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.BaseDirectory">
+            <summary>
+            Gets the Base Directory used for static content
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.AppSettings">
+            <summary>
+            Gets the application settings
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Context">
+            <summary>
+            Gets the context of the Server
+            </summary>
+            <remarks>
+            The context is a name value collection which persists only while the server is running, if you need to persist beyond that use the <see cref="P:VDS.Web.HttpServer.AppSettings"/> instead
+            </remarks>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Console">
+            <summary>
+            Gets/Sets the console which is used to log non-HTTP request specific messages, all HTTP request logging is handled by the <see cref="T:VDS.Web.Logging.IHttpLogger"/> infrastructure.
+            </summary>
+            <remarks>
+            Setting the console to null means that informational messages will be silently discarded.
+            </remarks>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Handlers">
+            <summary>
+            Gets the Handlers for the Server
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.Loggers">
+            <summary>
+            Gets the Loggers for the Server
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.MimeTypes">
+            <summary>
+            Gets/Sets the MIME type manager for the server
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.PreRequestModules">
+            <summary>
+            Gets the pre-request modules for the Server
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.PreResponseModules">
+            <summary>
+            Gets the pre-response modules for the Server
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.State">
+            <summary>
+            Gets the server state
+            </summary>
+        </member>
+        <member name="P:VDS.Web.HttpServer.VirtualDirectories">
+            <summary>
+            Gets/Sets the virtual directory manager
+            </summary>
+        </member>
+        <member name="T:VDS.Web.HttpServer.HandleRequestDelegate">
+            <summary>
+            Delegate for handing off request processing to be asynchronous
+            </summary>
+            <param name="context">Listener Context</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.Web.HttpServerException">
+            <summary>
+            Represents an eror in the Server
+            </summary>
+        </member>
+        <member name="M:VDS.Web.HttpServerException.#ctor(System.String)">
+            <summary>
+            Creates a new Server Exception
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="M:VDS.Web.HttpServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new Server Exception
+            </summary>
+            <param name="message">Error Message</param>
+            <param name="cause">Inner Exception</param>
+        </member>
+        <member name="T:VDS.Web.NoHandlerException">
+            <summary>
+            Represents the situation where no handler is available to process a request
+            </summary>
+        </member>
+        <member name="M:VDS.Web.NoHandlerException.#ctor(System.String)">
+            <summary>
+            Creates a new No Handler Exception
+            </summary>
+            <param name="message">Error Message</param>
+        </member>
+        <member name="M:VDS.Web.NoHandlerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new No Handler Exception
+            </summary>
+            <param name="message">Error Message</param>
+            <param name="cause">Inner Exception</param>
+        </member>
+        <member name="T:VDS.Web.Context">
+            <summary>
+            Represents arbitrary context information, essentially just a key value collection
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Context.Clear">
+            <summary>
+            Clears the context
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Context.Item(System.String)">
+            <summary>
+            Gets/Sets an item in the state
+            </summary>
+            <param name="name">Key</param>
+            <returns>Value or null if there is value associated with the given key</returns>
+        </member>
+        <member name="P:VDS.Web.Context.Count">
+            <summary>
+            Gets the number of key value pairs in the context
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Configuration.MimeTypeMapping">
+            <summary>
+            Represents a MIME Type mapping
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeMapping.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new mapping
+            </summary>
+            <param name="extension">File Extension</param>
+            <param name="mimeType">MIME Type</param>
+            <remarks>
+            Assumes non-binary content
+            </remarks>
+        </member>
+        <member name="M:VDS.Web.Configuration.MimeTypeMapping.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new mapping
+            </summary>
+            <param name="extension">File Extension</param>
+            <param name="mimeType">MIME Type</param>
+            <param name="binary">Whether the content is binary</param>
+        </member>
+        <member name="P:VDS.Web.Configuration.MimeTypeMapping.Extension">
+            <summary>
+            Gets the File Extension
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Configuration.MimeTypeMapping.MimeType">
+            <summary>
+            Gets the MIME Type
+            </summary>
+        </member>
+        <member name="P:VDS.Web.Configuration.MimeTypeMapping.IsBinaryData">
+            <summary>
+            Gets whether the content is binary
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Modules.LoggingModule">
+            <summary>
+            Module using to perform request logging
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Modules.LoggingModule.ProcessRequest(VDS.Web.HttpServerContext)">
+            <summary>
+            Process a request by asking each logger registered on the server to log it
+            </summary>
+            <param name="context">Server Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Modules.LoggingModule.PreStateChange(VDS.Web.HttpServer,VDS.Web.ServerState)">
+            <summary>
+            Handles the server pre-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+            <param name="target">State the server is transitioning to</param>
+        </member>
+        <member name="M:VDS.Web.Modules.LoggingModule.PostStateChange(VDS.Web.HttpServer)">
+            <summary>
+            Handles the server post-state change notification
+            </summary>
+            <param name="server">HTTP Server</param>
+        </member>
+        <member name="M:VDS.Web.Modules.LoggingModule.Dispose">
+            <summary>
+            Diposes of the module
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Handlers.StaticFileHandlersCollection">
+            <summary>
+            A Handlers collection that has the <see cref="T:VDS.Web.Handlers.StaticFileHandler">StaticFileHandler</see> pre-registered
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Handlers.StaticFileHandlersCollection.#ctor">
+            <summary>
+            Creates a new Handlers collection
+            </summary>
+        </member>
+        <member name="T:VDS.Web.ServerState">
+            <summary>
+            Possible server states
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Creating">
+            <summary>
+            Creating, the server is being created
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Created">
+            <summary>
+            Created, the server has been created but not yet started
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Starting">
+            <summary>
+            Starting, the server is starting
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Running">
+            <summary>
+            Running, the server is running
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Stopping">
+            <summary>
+            Stopping, the server is being stopped
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Stopped">
+            <summary>
+            Stopped, the server is stopped
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Disposing">
+            <summary>
+            Disposing, the server is being disposed of
+            </summary>
+        </member>
+        <member name="F:VDS.Web.ServerState.Disposed">
+            <summary>
+            Disposed, the server has been disposed of
+            </summary>
+        </member>
+        <member name="T:VDS.Web.Extensions">
+            <summary>
+            Useful extension methods
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Extensions.ToLogString(System.Net.IPAddress)">
+            <summary>
+            Converts an IP Address into a loggable address
+            </summary>
+            <param name="address">IP Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Extensions.ToLogString(System.String)">
+            <summary>
+            Converts an IP Address into a loggable address
+            </summary>
+            <param name="address">IP Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:VDS.Web.Extensions.GetSafeNamedItem(System.Xml.XmlAttributeCollection,System.String,System.String)">
+            <summary>
+            Tries to get a named item from an XML Attributes collection returning null if the item is not present
+            </summary>
+            <param name="attributes">Attributes</param>
+            <param name="name">Name</param>
+            <param name="namespaceUri">Namespace URI</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.Web.Tools">
+            <summary>
+            Useful utility methods
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Tools.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Copies one stream to another in 8k chunks
+            </summary>
+            <param name="input">Input Stream</param>
+            <param name="output">Output Stream</param>
+            <returns>Number of bytes copied</returns>
+        </member>
+        <member name="M:VDS.Web.Tools.ToRfc2822(System.DateTime)">
+            <summary>
+            Converts a DateTime to RFC 2822 format
+            </summary>
+            <param name="dt">Date Time</param>
+            <returns></returns>
+        </member>
+        <member name="T:VDS.Web.Utilities">
+            <summary>
+            Utility methods for web servers
+            </summary>
+        </member>
+        <member name="M:VDS.Web.Utilities.UrlDecode(System.String)">
+            <summary>
+            URL Decodes a value taking account of the fact that + may be used as a space
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

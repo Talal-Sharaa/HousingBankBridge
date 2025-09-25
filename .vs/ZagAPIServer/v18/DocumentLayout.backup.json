@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|c:\\zagtrader_repo\\datafeed2\\housingbankbridgecs\\ibmmq\\ibmmq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|solutionrelative:ibmmq\\ibmmq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|c:\\zagtrader_repo\\datafeed2\\housingbankbridgecs\\zaghandlers\\housingbankcorebankhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|solutionrelative:zaghandlers\\housingbankcorebankhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\db\\dszag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|solutionrelative:db\\dszag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\properties\\resource1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{BE943F6F-616E-43E5-80B2-488150DE5DA7}|ZagAPIServer.csproj|solutionrelative:properties\\resource1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 727,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99a11807-c5db-4877-ad35-09b56a044011}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HousingBankCoreBankHandler.cs",
+              "DocumentMoniker": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\ZagHandlers\\HousingBankCoreBankHandler.cs",
+              "RelativeDocumentMoniker": "ZagHandlers\\HousingBankCoreBankHandler.cs",
+              "ToolTip": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\ZagHandlers\\HousingBankCoreBankHandler.cs*",
+              "RelativeToolTip": "ZagHandlers\\HousingBankCoreBankHandler.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T15:15:03.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DSZAG.cs",
+              "DocumentMoniker": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\DB\\DSZAG.cs",
+              "RelativeDocumentMoniker": "DB\\DSZAG.cs",
+              "ToolTip": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\DB\\DSZAG.cs",
+              "RelativeToolTip": "DB\\DSZAG.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAADgv2wAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T12:08:07.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IBMMQ.cs",
+              "DocumentMoniker": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\IBMMQ\\IBMMQ.cs",
+              "RelativeDocumentMoniker": "IBMMQ\\IBMMQ.cs",
+              "ToolTip": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\IBMMQ\\IBMMQ.cs",
+              "RelativeToolTip": "IBMMQ\\IBMMQ.cs",
+              "ViewState": "AgIAAFsBAAAAAAAAAAAEwHYBAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T11:19:44.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Resource1.resx",
+              "DocumentMoniker": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\Properties\\Resource1.resx",
+              "RelativeDocumentMoniker": "Properties\\Resource1.resx",
+              "ToolTip": "C:\\ZagTrader_Repo\\DataFeed2\\HousingBankBridgeCS\\Properties\\Resource1.resx",
+              "RelativeToolTip": "Properties\\Resource1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-09-24T11:46:49.862Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 85,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ecb7191a-597b-41f5-9843-03a4cf275dde}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

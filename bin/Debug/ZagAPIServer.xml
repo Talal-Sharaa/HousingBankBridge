@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZagAPIServer</name>
+    </assembly>
+    <members>
+        <member name="M:ZagAPIServer.DB.DSZAG.SqlLoader.LoadTableAsync(System.String,System.String)">
+            <summary>
+            Backward-compatible overload (no parameters).
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ZagAPIServer.DB.DSZAG.SqlLoader.LoadTableAsync(System.String,System.String,System.Action{System.Data.SqlClient.SqlCommand},System.Data.CommandType,System.Nullable{System.Int32})" -->
+        <member name="M:ZagAPIServer.DB.DSZAG.TransactionsToSyncWithBankingSystem.Fill">
+            <summary>
+            Asynchronous version if you prefer async I/O.
+            </summary>
+        </member>
+        <member name="M:ZagAPIServer.DB.DSZAG.BankIntegrationTransaction1.Fill(System.String)">
+            <summary>
+            Retrieves a non-rejected bank integration transaction by TransactionID.
+            Returns an empty DataTable if not found.
+            </summary>
+        </member>
+        <member name="M:ZagAPIServer.DB.DSZAG.BankIntegrationTransaction1.UpdateQuery(System.String,System.String)">
+            <summary>
+            Updates BankReferenceNo and timestamp for a transaction.
+            Returns the number of affected rows.
+            </summary>
+        </member>
+        <member name="M:ZagAPIServer.DB.DSZAG.BankIntegrationTransaction1.UpdateRejection(System.String,System.String)">
+            <summary>
+            Marks a transaction as rejected with a note and updates timestamp.
+            Returns the number of affected rows.
+            </summary>
+        </member>
+        <member name="T:ZagAPIServer.Properties.Resource1">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.AccINQ">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml SBAcctInq.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;AcctInq&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;BRK&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt;/EntityId&gt;
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.AccINQRep">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.finacle.com/fixml AcctInq.xsd&quot;&gt;
+            	&lt;Header&gt;
+            		&lt;ResponseHeader&gt;
+            			&lt;RequestMessageKey&gt;
+            				&lt;RequestUUID&gt;Req_15136323420714131&lt;/RequestUUID&gt;
+            				&lt;ServiceRequestId&gt;AcctInq&lt;/ServiceRequestId&gt;
+            				&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            				&lt;ChannelId&gt;BRK&lt;/ChannelId&gt;
+            			&lt;/RequestMessageKey&gt;
+            			&lt;ResponseMessageInfo&gt;
+            				&lt;BankId [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.AddLIEN">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml AcctLienAdd.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;AcctLienAdd&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.AddNextLien">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml AcctLienMod.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;AcctLienMod&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt;/EntityId&gt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.BalInc">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml BalInq.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;BalInq&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt;/EntityId&gt;
+            &lt;Ent [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.DelLIEN">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml AcctLienMod.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;AcctLienMod&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.GetAllLien">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml AcctLienInq.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;AcctLienInq&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/TimeZone&gt;
+            &lt;EntityId&gt;&lt;/EntityId&gt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.LastTransactions">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xsi:schemaLocation=&quot;http://www.finacle.com/fixml getLastNTransactions.xsd&quot; xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;&lt;Header&gt;
+            &lt;RequestHeader&gt;
+            &lt;MessageKey&gt;
+            &lt;RequestUUID&gt;Req_Zag_Trans_X&lt;/RequestUUID&gt;
+            &lt;ServiceRequestId&gt;getLastNTransactions&lt;/ServiceRequestId&gt;
+            &lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            &lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            &lt;/MessageKey&gt;
+            &lt;RequestMessageInfo&gt;
+            &lt;BankId&gt;01&lt;/BankId&gt;
+            &lt;TimeZone&gt;&lt;/Time [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.SendTransActions">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;FIXML xmlns=&quot;http://www.finacle.com/fixml&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; schemaLocation=&quot;http://www.finacle.com/fixml executeFinacleScript.xsd&quot;&gt;
+               &lt;Header&gt;
+            	  &lt;RequestHeader&gt;
+            		 &lt;MessageKey&gt;
+            			&lt;RequestUUID&gt;Req_Zag_ADD_Trans_X&lt;/RequestUUID&gt;
+            			&lt;ServiceRequestId&gt;XferTrnAdd&lt;/ServiceRequestId&gt;
+            			&lt;ServiceRequestVersion&gt;10.3&lt;/ServiceRequestVersion&gt;
+            			&lt;ChannelId&gt;SMS&lt;/ChannelId&gt;
+            		 &lt;/MessageKey&gt;
+            		 &lt;RequestMessageInfo&gt;
+            			&lt;BankId&gt;01&lt;/Ban [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.TransLeg">
+            <summary>
+              Looks up a localized string similar to &lt;PartTrnRec&gt;
+            			  &lt;AcctId&gt;
+            				 &lt;AcctId&gt;ZAGACCID&lt;/AcctId&gt;
+            				 &lt;AcctCurr&gt;ZAG1CURRENCY&lt;/AcctCurr&gt;
+            			  &lt;/AcctId&gt;
+            			  &lt;CreditDebitFlg&gt;ZAGFLAG&lt;/CreditDebitFlg&gt;
+            			  &lt;TrnAmt&gt;
+            				 &lt;amountValue&gt;ZAGAMOUNT&lt;/amountValue&gt;
+            				 &lt;currencyCode&gt;ZAGCURRENCY&lt;/currencyCode&gt;
+            			  &lt;/TrnAmt&gt;
+            			  &lt;TrnParticulars&gt;ZAGTRNPRT&lt;/TrnParticulars&gt;
+            			  &lt;ValueDt&gt;ZAGDATE&lt;/ValueDt&gt;
+            			  &lt;Rate&gt;ZAGRATE&lt;/Rate&gt;
+            			  &lt;RateCode&gt;ZAG1RATECODE&lt;/RateCode&gt;
+            			  &lt;SERIALNUM&gt;ZAGSERIAL&lt;/SERIALNUM&gt;
+            		   &lt;/PartTrnRec&gt;.
+            </summary>
+        </member>
+        <member name="P:ZagAPIServer.Properties.Resource1.TransTail">
+             <summary>
+               Looks up a localized string similar to &lt;PARTTRAN isMultiRec=&quot;Y&quot;&gt;
+            			   &lt;SERIALNUM&gt;ZAGSERIAL&lt;/SERIALNUM&gt;
+            	  &lt;TranParticularCode&gt;ZAGPURPOSCODE&lt;/TranParticularCode&gt;
+            			   &lt;TranParticulars2&gt;ZAGEMP&lt;/TranParticulars2&gt;
+            			   &lt;RefNum&gt;ZAGID&lt;/RefNum&gt;
+            &lt;DiaryNum/&gt;
+            &lt;TODAllowed&gt;N&lt;/TODAllowed&gt;
+            			&lt;/PARTTRAN&gt;.
+             </summary>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.DateTime,System.String)">
+            <summary>
+            Converts a string to a DateTime object with the specified format.
+            </summary>
+            <param name="vValue">The object that calls the function.</param>
+            <param name="vFormat">The desired format of the DateTime object.</param>
+            <param name="vReValue">The value to return if the conversion fails.</param>
+            <returns>A formatted DateTime object representation of the string. </returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Converts a string to a nullable DateTime object with the specified format.
+            </summary>
+            <param name="vValue">The object that calls the function.</param>
+            <param name="vFormat">The desired format of the DateTime object.</param>
+            <param name="vReValue">The value to return if the conversion fails.</param>
+            <returns>A formatted nullable DateTime object representation of the string. </returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Byte)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>Int8</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Boolean)">
+            <summary>Convert current object to bool</summary>
+            <param name="vValue">this object</param>
+            <param name="vReValue">bool</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.SByte)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>Int8</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Int16)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>Int16</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Int32)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>int</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Int64)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>Int64</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.UNvl(System.Object,System.Byte)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>UInt8</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.UNvl(System.Object,System.UInt16)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>UInt16</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.UNvl(System.Object,System.UInt32)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>UInt32</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.UNvl(System.Object,System.UInt64)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>UInt64</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Double)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>double</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Decimal)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>decimal</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Single)">
+            <summary>
+            Powered by Shaheen Al-Habash 2022-05-22
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>float</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.String)">
+            <summary>
+            Powered by Shaheen Al-Habash 2016-01-24
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.Nvl(System.Object,System.Char)">
+            <summary>
+            Powered by Shaheen Al-Habash 2022-03-22
+            </summary>
+            <param name="vValue"></param>
+            <param name="vReValue"></param>
+            <returns>char</returns>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.MaskElementAndDescendants(System.Xml.Linq.XElement)">
+            <summary>
+            A helper method to recursively mask an element and all its children.
+            </summary>
+            <param name="element">The starting XElement to mask.</param>
+        </member>
+        <member name="M:ZagAPIServer.Tools.Tool.MaskValue(System.String)">
+            <summary>
+            Applies the masking rule to a single string value.
+            "123456789" becomes "12****89".
+            </summary>
+            <param name="value">The string to mask.</param>
+            <returns>The masked string.</returns>
+        </member>
+    </members>
+</doc>
